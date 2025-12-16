@@ -3,47 +3,43 @@ const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia0
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {
-      avatarUrl: defaultAvatarUrl,
-      nickName: '',
-    },
-    hasUserInfo: false,
-    canIUseGetUserProfile: wx.canIUse('getUserProfile'),
-    canIUseNicknameComp: wx.canIUse('input.type.nickname'),
-  },
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onChooseAvatar(e) {
-    const { avatarUrl } = e.detail
-    const { nickName } = this.data.userInfo
-    this.setData({
-      "userInfo.avatarUrl": avatarUrl,
-      hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
-    })
-  },
-  onInputChange(e) {
-    const nickName = e.detail.value
-    const { avatarUrl } = this.data.userInfo
-    this.setData({
-      "userInfo.nickName": nickName,
-      hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
-    })
-  },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    })
+    songs: [
+      "1 《明月夜》",
+      "2 《笑看风云》",
+      "3 《与你到永久》",
+      "4 《阿郞恋曲》",
+      "5 《Stay》",
+      "6 《孤独的牧羊人》",
+      "7 《等不到的爱》",
+      "8 《Take Me to Your Heart》",
+      "9 《背包》",
+      "10 《成都》",
+      "11 《暂别离》",
+      "12 《把根留住》",
+      "13 《循风》",
+      "14 《庸人自扰》",
+      "15 《Five Hundred Miles》",
+      "16 《多余的温柔》",
+      "17 《拉萨夜雨》",
+      "18 《花妖》",
+      "19 《难舍难分》",
+      "20 《归途有风》",
+      "21 《何时能出头》",
+      "22 《忘情忘你忘最初》",
+      "23 《此情一直在心间》",
+      "24 《秋风吹起》",
+      "25 《摘下满天星》",
+      "26 《尘缘》",
+      "27 《心上的罗加》",
+      "28 《等到那一天》",
+      "29 《似是故人来》",
+      "30 《笑红尘》",
+      "31 《问心无愧最自在》",
+      "32 《你》",
+      "33 《鼓楼》",
+      "34 《多年以后》",
+      "35 《明天会吹什么风》",
+      "36 《疲惫的人生》",
+    ]
   },
 })
