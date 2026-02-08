@@ -5,7 +5,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "我唱过的歌",
+    "navigationBarTitleText": "我的点歌单",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",
